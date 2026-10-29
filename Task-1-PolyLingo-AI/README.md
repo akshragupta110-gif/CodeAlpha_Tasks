@@ -1,57 +1,43 @@
-# 🌐 PolyLingo AI — Language Translation Tool
+# 🌍 PolyLingo AI — Language Translation Tool
 
-**PolyLingo AI** is a multilingual language translation web application developed using Python and Streamlit. It helps users translate text between multiple languages through a simple, interactive, and user-friendly interface.
+PolyLingo AI is a multilingual language translation web application developed using Python and Streamlit. It helps users translate text between multiple languages through a simple and interactive interface.
 
 ## ✨ Features
-
-- 🌍 **Multilingual Translation:** Translate text across 20 languages.
-- 🔍 **Automatic Language Detection:** Detect the source language automatically.
-- 🎤 **Voice Input:** Enter text using speech recognition.
-- 🔊 **Text-to-Speech:** Listen to translated text.
-- 🕘 **Translation History:** Access previous translations.
-- 📥 **Download Translations:** Download translated text for future use.
-- 🎨 **Interactive Interface:** A clean interface designed for ease of use.
-- ⚠️ **Error Handling:** Display helpful messages when translation requests fail.
+- 🌐 Translation across 20 languages
+- 🔍 Automatic source-language detection
+- 🎙️ Voice input using speech recognition
+- 🔊 Text-to-speech for translated results
+- 📚 Recent translation history
+- ⬇️ Download translated text
+- 🌙 Dark and light themes
+- ⚠️ Error handling for common service issues
 
 ## 🛠️ Technologies Used
+- Python
+- Streamlit
+- Requests
+- Langdetect
+- SpeechRecognition
+- Google Text-to-Speech (gTTS)
 
-- **Python** — Core programming language.
-- **Streamlit** — Web application interface.
-- **Google Translate Endpoint** — Text translation.
-- **SpeechRecognition** — Voice input.
-- **gTTS (Google Text-to-Speech)** — Audio generation.
-- **Requests** — HTTP requests for translation.
-- **Langdetect** — Language detection.
+## ⚙️ Installation and Setup
 
-🚀 Getting Started
+1. Install Python on your computer.
+2. Download or clone this repository.
+3. Open a terminal in the project folder.
+4. Install the required libraries:
 
-1. Clone the Repository
+   `pip install -r requirements.txt`
 
-git clone https://github.com/akshragupta110-gif/CodeAlpha_Tasks.git
+5. Run the application:
 
-2. Navigate to the Project Folder
+   `streamlit run app.py`
 
-cd CodeAlpha_Tasks/Task-1-PolyLingo-AI
+## 🌐 Internet Requirement
+An internet connection is required for translation, speech recognition, and text-to-speech services. Free online services may have usage limits.
 
-3. Install Dependencies
-
-pip install -r requirements.txt
-
-4. Run the Application
-
-streamlit run app.py
-
-🎯 Project Objective
-
-The objective of PolyLingo AI is to make multilingual communication easier by combining text translation, voice input, and speech output in a single application.
-
-💼 Internship
-
-Developed as part of the **CodeAlpha Artificial Intelligence Internship**.
-
-👩‍💻 Author
-
-Akshra Gupta
-
-
-⭐ If you find this project interesting, feel free to explore the source code!
+## 👩‍💻 Project Information
+**Project Name:** PolyLingo AI  
+**Project Type:** AI-Based Language Translation Tool  
+**Programming Language:** Python  
+**Interface:** Streamlit
