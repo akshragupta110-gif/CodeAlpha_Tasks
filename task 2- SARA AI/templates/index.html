@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
+    <title>SARA - Your Smart Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app">
+        <aside id="sidebar">
+            <div class="sidebar-heading">
+                <h3>Chat History</h3>
+                <button id="clear-history" class="text-button" type="button">Clear All</button>
+            </div>
+            <div id="chat-history"></div>
+            <p class="sidebar-tip">Your chats are saved in this browser.</p>
+        </aside>
+
+        <header>
+            <div class="logo" aria-hidden="true">
+                <svg viewBox="0 0 100 100">
+                    <path d="M17 37 C25 12 72 9 83 28 C94 47 66 53 48 57 C29 61 10 69 19 84 C29 101 72 91 84 70"/>
+                    <path d="M12 50 C21 27 39 19 57 20"/>
+                    <path d="M88 50 C79 73 61 81 43 80"/>
+                </svg>
+            </div>
+            <div class="brand-copy"><h2>SARA</h2><span>AI ASSISTANT</span></div>
+            <div class="header-status"><i></i> Ready to help</div>
+        </header>
+
+        <div class="toolbar">
+            <div class="toolbar-actions">
+                <button id="new-chat" class="new-chat" type="button">＋ New Chat</button>
+                <button id="open-memory" class="memory-button" type="button">✧ Memory</button>
+            </div>
+            <span class="privacy-note">Private to this browser</span>
+        </div>
+
+        <main id="chat" aria-live="polite">
+            <div class="welcome">
+                <div class="center-logo">
+                    <svg viewBox="0 0 100 100">
+                        <path d="M17 37 C25 12 72 9 83 28 C94 47 66 53 48 57 C29 61 10 69 19 84 C29 101 72 91 84 70"/>
+                        <path d="M12 50 C21 27 39 19 57 20"/>
+                        <path d="M88 50 C79 73 61 81 43 80"/>
+                    </svg>
+                </div>
+                <h1>What can I help you with?</h1>
+                <p>Ask anything. Explore everything.</p>
+                <div class="suggestions">
+                    <button type="button" class="suggestion">Explain a difficult topic</button>
+                    <button type="button" class="suggestion">Help me write something</button>
+                    <button type="button" class="suggestion">Give me project ideas</button>
+                </div>
+            </div>
+        </main>
+
+        <form id="chat-form">
+            <textarea id="message" rows="1" maxlength="12000" placeholder="Message SARA..." autocomplete="off" aria-label="Message SARA"></textarea>
+            <button type="submit" id="send-button" aria-label="Send message">➤</button>
+        </form>
+        <p class="note">SARA can make mistakes. Check important information.</p>
+    </div>
+
+    <dialog id="memory-dialog" class="memory-dialog">
+        <div class="memory-panel">
+            <div class="memory-heading">
+                <div>
+                    <h2>SARA Memory</h2>
+                    <p>Save facts that you want SARA to use in future chats on this browser.</p>
+                </div>
+                <button id="close-memory" class="close-memory" type="button" aria-label="Close">×</button>
+            </div>
+            <label for="memory-input">Your saved information</label>
+            <textarea id="memory-input" rows="7" maxlength="5000" placeholder="Example: My name is Alex. My favourite colour is blue. I am learning Python."></textarea>
+            <p class="memory-hint">Memory is stored in this browser. Do not save passwords, API keys or sensitive account details.</p>
+            <div class="memory-actions">
+                <button id="clear-memory" class="clear-memory" type="button">Clear Memory</button>
+                <button id="save-memory" class="save-memory" type="button">Save Memory</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
